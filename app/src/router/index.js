@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 
 const routes = [
+
   {
     path: '/',
     name: 'Home',
@@ -18,6 +19,7 @@ const routes = [
 ]
 
 const router = createRouter({
+  base: process.env.BASE_URL,
   history: createWebHistory(process.env.BASE_URL),
   routes
 })
