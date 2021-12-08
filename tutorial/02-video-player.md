@@ -28,6 +28,17 @@ First, we are going to add a router to the app.  A router will enable us to serv
 
 <add a diff here>
 
-## Add the sample video to the router
+## Add vuex to keep track of the player state when we change between routes
+
+We want out video player to clean up when we are not looking at it in the app.  This will avoid consuming alot of memory for videos as we navigte to views in the app that don't include a video player.
+
+```
+    vue add vuex
+```
+
+## Add code to remember the player state when we mount and unmount views that include it
+
+<diff here>
+
 
 

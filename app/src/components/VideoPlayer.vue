@@ -40,23 +40,22 @@ export default {
     }
   },
   beforeUnmount() {
-    console.log("before unmount event")
+    console.log("Vue before unmount event")
+    console.log("Remove the player if we are not activly viewing it.  Save the state for when we return")
+
     if (this.player) {
       this.player.dispose();
       this.$store.commit('updatePlayer', null)
     }
+
   },
   created() {
     
-    console.log("created event")
+    console.log("Vue created event")
   },
   mounted: function () {
-    console.log("mounted event")
-    // this.player = videojs(this.$refs.videoPlayer, {  playbackRates: [0.5, 1, 1.5, 2] });
-    
-    // this.player.ready(() => {
-    //   this.player.loop(true);
-
+    console.log("Vue mounted event")
+    console.log("Create the player and apply the current state from the vuex store")
     this.player = videojs(this.$refs.videoPlayer, this.options, function onPlayerReady() {
             console.log('onPlayerReady', this);
     });
