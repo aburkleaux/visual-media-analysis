@@ -1,2 +1,2 @@
-# viz-media-analysis
-Interactive visualization of machine learning media analysis
+# Visual Media Analysis
+Interactive visualization of machine learning generated media analysis
